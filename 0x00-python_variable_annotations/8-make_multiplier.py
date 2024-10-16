@@ -7,8 +7,5 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
     returns a function  multiplies a float by multiplier.
     """
-    def f(n: float) -> float:
-        """ multiplies a float by multiplier """
-        return float(n * multiplier)
-
+    f: Callable[[float], float] = lambda x: x * multiplier
     return f
